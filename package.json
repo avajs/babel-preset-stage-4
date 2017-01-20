@@ -1,6 +1,6 @@
 {
   "name": "@ava/babel-preset-stage-4",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Efficiently applies the minimum of transforms to run stage 4 code on Node.js 4 and 6",
   "main": "index.js",
   "files": [
