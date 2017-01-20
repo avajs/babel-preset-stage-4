@@ -12,6 +12,7 @@ test('plugins are dependencies', t => {
 	for (const plugin of v4) {
 		t.true(set.has(plugin), `v4 plugin ${plugin}`);
 	}
+
 	for (const plugin of v6) {
 		t.true(set.has(plugin), `v6 plugin ${plugin}`);
 	}
@@ -30,7 +31,7 @@ function buildsCorrectPreset(t, version, mapping) {
 
 	const {plugins} = buildPreset();
 	require(mapping).forEach((module, index) => {
-		t.true(require(module) === plugins[index], `${module} at index ${index}`);
+		t.is(require(module), plugins[index], `${module} at index ${index}`);
 	});
 }
 buildsCorrectPreset.title = (_, version) => `builds correct preset for Node.js ${version}`;
@@ -49,7 +50,7 @@ function computesCorrectPackageHash(t, version, mapping) {
 		}),
 		'package-hash': {
 			sync([preset, ...plugins]) {
-				t.true(preset === require.resolve('./package.json'));
+				t.is(preset, require.resolve('./package.json'));
 				t.deepEqual(plugins, expected);
 			}
 		}

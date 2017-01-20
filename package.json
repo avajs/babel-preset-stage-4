@@ -2,41 +2,26 @@
   "name": "@ava/babel-preset-stage-4",
   "version": "1.0.0",
   "description": "Efficiently applies the minimum of transforms to run stage 4 code on Node.js 4 and 6",
-  "main": "index.js",
+  "license": "MIT",
+  "repository": "avajs/babel-preset-stage-4",
+  "author": "Mark Wubben (https://novemberborn.net)",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "posttest": "xo",
+    "coverage": "nyc npm test"
+  },
   "files": [
     "index.js",
     "package-hash.js",
     "plugins"
   ],
-  "scripts": {
-    "test": "ava",
-    "posttest": "xo",
-    "coverage": "nyc npm test"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/avajs/babel-preset-stage-4.git"
-  },
   "keywords": [
     "ava",
     "babel-preset"
   ],
-  "author": "Mark Wubben (https://novemberborn.net/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/avajs/babel-preset-stage-4/issues"
-  },
-  "homepage": "https://github.com/avajs/babel-preset-stage-4#readme",
-  "devDependencies": {
-    "ava": "^0.17.0",
-    "coveralls": "^2.11.15",
-    "nyc": "^10.1.2",
-    "proxyquire": "^1.7.10",
-    "xo": "^0.17.1"
-  },
   "dependencies": {
     "babel-plugin-check-es2015-constants": "^6.8.0",
     "babel-plugin-syntax-trailing-function-commas": "^6.20.0",
@@ -50,6 +35,13 @@
     "babel-plugin-transform-es2015-unicode-regex": "^6.11.0",
     "babel-plugin-transform-exponentiation-operator": "^6.8.0",
     "package-hash": "^1.2.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "coveralls": "^2.11.15",
+    "nyc": "^10.1.2",
+    "proxyquire": "^1.7.10",
+    "xo": "^0.17.1"
   },
   "nyc": {
     "reporter": [
