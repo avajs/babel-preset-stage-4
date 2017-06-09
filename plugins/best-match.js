@@ -4,6 +4,10 @@ const process = require('process');
 
 function getClosestVersion() {
 	const version = parseFloat(process.versions.node);
+	if (version >= 8) {
+		return 8;
+	}
+
 	if (version >= 6) {
 		return 6;
 	}

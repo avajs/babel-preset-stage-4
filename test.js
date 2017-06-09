@@ -5,6 +5,7 @@ import proxyquire from 'proxyquire';
 const {dependencies} = require('./package.json');
 const v4 = require('./plugins/4.json');
 const v6 = require('./plugins/6.json');
+const v8 = require('./plugins/8.json');
 
 test('plugins are dependencies', t => {
 	const set = new Set(Object.keys(dependencies));
@@ -15,6 +16,10 @@ test('plugins are dependencies', t => {
 
 	for (const plugin of v6) {
 		t.true(set.has(plugin), `v6 plugin ${plugin}`);
+	}
+
+	for (const plugin of v8) {
+		t.true(set.has(plugin), `v8 plugin ${plugin}`);
 	}
 });
 
@@ -62,7 +67,8 @@ for (const [version, mapping] of [
 	['4.7.2', './plugins/4.json'],
 	['5.10.1', './plugins/4.json'],
 	['6.9.4', './plugins/6.json'],
-	['7.4.0', './plugins/6.json']
+	['7.4.0', './plugins/6.json'],
+	['8.0.0', './plugins/8.json']
 ]) {
 	test([buildsCorrectPreset, computesCorrectPackageHash], version, mapping);
 }

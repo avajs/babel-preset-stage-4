@@ -4,7 +4,7 @@
 
 Aspires to bring ECMAScript stage 4 proposals to AVA's test and helper files.
 
-Efficiently applies the minimum of transforms to run stage 4 code on Node.js 4 and 6.
+Efficiently applies the minimum of transforms to run stage 4 code on Node.js 4, 6 and 8.
 
 Built-ins are not added or extended, so features like Proxies, `Array.prototype.includes` or `String.prototype.padStart` will only be available if the Node.js version running the tests supports it. Consult [node.green] for details.
 
