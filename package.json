@@ -12,7 +12,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava",
+    "test": "ava",
     "posttest": "xo",
     "coverage": "nyc npm test"
   },
@@ -31,7 +31,7 @@
     "babel-plugin-transform-async-to-generator": "^6.16.0",
     "babel-plugin-transform-es2015-destructuring": "^6.19.0",
     "babel-plugin-transform-es2015-function-name": "^6.9.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-es2015-parameters": "^6.21.0",
     "babel-plugin-transform-es2015-spread": "^6.8.0",
     "babel-plugin-transform-es2015-sticky-regex": "^6.8.0",
@@ -40,11 +40,11 @@
     "package-hash": "^1.2.0"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
-    "coveralls": "^2.11.15",
-    "nyc": "^10.1.2",
+    "ava": "^0.22.0",
+    "codecov": "^2.3.0",
+    "nyc": "^11.2.1",
     "proxyquire": "^1.7.10",
-    "xo": "^0.17.1"
+    "xo": "^0.18.2"
   },
   "nyc": {
     "reporter": [

@@ -8,6 +8,6 @@ cache:
     - $HOME/.npm
     - node_modules
 before_install:
-  - npm install --global npm@^5.0.3
+  - npm install --global npm@5.4.2
   - npm --version
 after_success: ./node_modules/.bin/codecov --file=./coverage/lcov.info
