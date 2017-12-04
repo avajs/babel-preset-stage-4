@@ -42,7 +42,7 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "codecov": "^2.3.0",
-    "nyc": "^11.2.1",
+    "nyc": "^11.4.1",
     "proxyquire": "^1.7.10",
     "xo": "^0.18.2"
   },
