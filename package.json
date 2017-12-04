@@ -40,7 +40,7 @@
     "package-hash": "^1.2.0"
   },
   "devDependencies": {
-    "ava": "^0.22.0",
+    "ava": "^0.25.0",
     "codecov": "^2.3.0",
     "nyc": "^11.2.1",
     "proxyquire": "^1.7.10",
