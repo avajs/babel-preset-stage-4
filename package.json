@@ -23,19 +23,19 @@
     "babel-preset"
   ],
   "dependencies": {
-    "babel-plugin-check-es2015-constants": "^6.8.0",
-    "babel-plugin-syntax-trailing-function-commas": "^6.20.0",
-    "babel-plugin-transform-async-to-generator": "^6.16.0",
-    "babel-plugin-transform-es2015-destructuring": "^6.19.0",
-    "babel-plugin-transform-es2015-function-name": "^6.9.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-plugin-transform-es2015-parameters": "^6.21.0",
-    "babel-plugin-transform-es2015-spread": "^6.8.0",
-    "babel-plugin-transform-es2015-sticky-regex": "^6.8.0",
-    "babel-plugin-transform-es2015-unicode-regex": "^6.11.0",
-    "babel-plugin-transform-exponentiation-operator": "^6.8.0"
+    "@babel/plugin-check-constants": "^7.0.0-beta.38",
+    "@babel/plugin-transform-async-to-generator": "^7.0.0-beta.38",
+    "@babel/plugin-transform-destructuring": "^7.0.0-beta.38",
+    "@babel/plugin-transform-exponentiation-operator": "^7.0.0-beta.38",
+    "@babel/plugin-transform-function-name": "^7.0.0-beta.38",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.38",
+    "@babel/plugin-transform-parameters": "^7.0.0-beta.38",
+    "@babel/plugin-transform-spread": "^7.0.0-beta.38",
+    "@babel/plugin-transform-sticky-regex": "^7.0.0-beta.38",
+    "@babel/plugin-transform-unicode-regex": "^7.0.0-beta.38"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.38",
     "ava": "^0.25.0",
     "codecov": "^3.0.0",
     "nyc": "^11.4.1",
