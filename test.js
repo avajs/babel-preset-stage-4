@@ -41,28 +41,6 @@ function buildsCorrectPreset(t, version, mapping) {
 }
 buildsCorrectPreset.title = (_, version) => `builds correct preset for Node.js ${version}`;
 
-function computesCorrectPackageHash(t, version, mapping) {
-	const expected = require(mapping).map(module => require.resolve(`${module}/package.json`));
-	t.plan(2);
-
-	proxyquire('./package-hash', {
-		'./plugins/best-match': proxyquire('./plugins/best-match', {
-			process: {
-				versions: {
-					node: version
-				}
-			}
-		}),
-		'package-hash': {
-			sync([preset, ...plugins]) {
-				t.is(preset, require.resolve('./package.json'));
-				t.deepEqual(plugins, expected);
-			}
-		}
-	});
-}
-computesCorrectPackageHash.title = (_, version) => `computes correct package hash for Node.js ${version}`;
-
 for (const [version, mapping] of [
 	['4.7.2', './plugins/4.json'],
 	['5.10.1', './plugins/4.json'],
@@ -70,5 +48,5 @@ for (const [version, mapping] of [
 	['7.4.0', './plugins/6.json'],
 	['8.0.0', './plugins/8.json']
 ]) {
-	test([buildsCorrectPreset, computesCorrectPackageHash], version, mapping);
+	test(buildsCorrectPreset, version, mapping);
 }

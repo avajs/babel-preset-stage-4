@@ -22,9 +22,6 @@ $ npm install --save @ava/babel-preset-stage-4
 
 Add `@ava/stage-4` to your [Babel] presets.
 
-Require `@ava/babel-preset-stage-4/package-hash` to get a combined hash for the installed version of the preset, as well as the plugins that were selected for the active Node.js version.
-
-
 [AVA]: https://ava.li
 [Babel]: https://babeljs.io
 [node.green]: http://node.green
