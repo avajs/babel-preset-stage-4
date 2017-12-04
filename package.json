@@ -12,9 +12,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "ava",
-    "posttest": "xo",
-    "coverage": "nyc npm test"
+    "test": "xo && nyc ava"
   },
   "files": [
     "index.js",
