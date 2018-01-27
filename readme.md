@@ -22,6 +22,15 @@ $ npm install --save @ava/babel-preset-stage-4
 
 Add `@ava/stage-4` to your [Babel] presets.
 
+### Options
+
+For more information on setting options for a preset, refer to the [preset options] documentation.
+
+#### `modules`
+
+By default this preset transform ES2015 modules to CommonJS. Set to `false` to disable this behavior. Other values are ignored.
+
 [AVA]: https://ava.li
 [Babel]: https://babeljs.io
 [node.green]: http://node.green
+[preset options]: http://babeljs.io/docs/plugins/#pluginpreset-options

@@ -23,18 +23,18 @@ test('plugins are dependencies', t => {
 	}
 });
 
-function buildsCorrectPreset(t, version, mapping) {
-	const buildPreset = proxyquire('./', {
-		'./plugins/best-match': proxyquire('./plugins/best-match', {
-			process: {
-				versions: {
-					node: version
-				}
+const buildPreset = (nodeVersion, options) => proxyquire('./', {
+	'./plugins/best-match': proxyquire('./plugins/best-match', {
+		process: {
+			versions: {
+				node: nodeVersion
 			}
-		})
-	});
+		}
+	})
+})(null, options);
 
-	const {plugins} = buildPreset();
+function buildsCorrectPreset(t, version, mapping) {
+	const {plugins} = buildPreset(version);
 	require(mapping).forEach((module, index) => {
 		t.is(require(module).default, plugins[index], `${module} at index ${index}`);
 	});
@@ -50,3 +50,8 @@ for (const [version, mapping] of [
 ]) {
 	test(buildsCorrectPreset, version, mapping);
 }
+
+test('@babel/plugin-transform-modules-commonjs can be disabled', t => {
+	const {plugins} = buildPreset('8.0.0', {modules: false});
+	t.false(new Set(plugins).has(require('@babel/plugin-transform-modules-commonjs').default));
+});
