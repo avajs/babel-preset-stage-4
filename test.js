@@ -36,7 +36,7 @@ function buildsCorrectPreset(t, version, mapping) {
 
 	const {plugins} = buildPreset();
 	require(mapping).forEach((module, index) => {
-		t.is(require(module), plugins[index], `${module} at index ${index}`);
+		t.is(require(module).default, plugins[index], `${module} at index ${index}`);
 	});
 }
 buildsCorrectPreset.title = (_, version) => `builds correct preset for Node.js ${version}`;
