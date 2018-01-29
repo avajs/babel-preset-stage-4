@@ -5,15 +5,29 @@ const process = require('process');
 function getClosestVersion() {
 	const version = parseFloat(process.versions.node);
 	if (version >= 8) {
-		return 8;
+		if (!process.versions.v8) {
+			// Assume compatibility with Node.js 8.3.0
+			return 'v8-6.0';
+		}
+
+		const v8 = parseFloat(process.versions.v8);
+		if (v8 >= 6.3) {
+			return 'v8-6.3';
+		}
+
+		if (v8 >= 6.2) {
+			return 'v8-6.2';
+		}
+
+		return `v8-6.0`;
 	}
 
 	if (version >= 6) {
-		return 6;
+		return '6';
 	}
 
 	// Node.js 4 is the minimal supported version.
-	return 4;
+	return '4';
 }
 
 module.exports = require(`./${getClosestVersion()}.json`);

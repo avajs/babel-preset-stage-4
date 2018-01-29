@@ -1,0 +1,5 @@
+[
+  "@babel/plugin-proposal-async-generator-functions",
+  "@babel/plugin-transform-modules-commonjs",
+  "@babel/plugin-transform-dotall-regex"
+]

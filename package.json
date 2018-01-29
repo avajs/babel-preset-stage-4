@@ -5,11 +5,8 @@
   "license": "MIT",
   "repository": "avajs/babel-preset-stage-4",
   "author": "Mark Wubben (https://novemberborn.net)",
-  "publishConfig": {
-    "access": "public"
-  },
   "engines": {
-    "node": ">=4"
+    "node": ">=4 <5 || >=6 <7 || >=8.3.0"
   },
   "scripts": {
     "test": "xo && nyc ava"
@@ -24,8 +21,11 @@
   ],
   "dependencies": {
     "@babel/plugin-check-constants": "^7.0.0-beta.38",
+    "@babel/plugin-proposal-async-generator-functions": "^7.0.0-beta.38",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.38",
     "@babel/plugin-transform-async-to-generator": "^7.0.0-beta.38",
     "@babel/plugin-transform-destructuring": "^7.0.0-beta.38",
+    "@babel/plugin-transform-dotall-regex": "^7.0.0-beta.38",
     "@babel/plugin-transform-exponentiation-operator": "^7.0.0-beta.38",
     "@babel/plugin-transform-function-name": "^7.0.0-beta.38",
     "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.38",
