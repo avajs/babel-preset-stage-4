@@ -4,11 +4,11 @@
 
 Aspires to bring [finished ECMAScript proposals](https://github.com/tc39/proposals/blob/master/finished-proposals.md) to AVA's test and helper files.
 
-Efficiently applies the minimum of transforms to run the latest JavaScript syntax on Node.js 4, 6 and 8.
+Efficiently applies the minimum of transforms to run the latest JavaScript syntax on Node.js 6 and 8.
 
 Built-ins are not added or extended, so features like Proxies, `Array.prototype.includes` or `String.prototype.padStart` will only be available if the Node.js version running the tests supports it. Consult [node.green] for details.
 
-Sometimes a particular feature is *mostly* implemented in Node.js. In that case transforms are not applied. This applies to `new.target` and iterator closing, which are not supported in Node.js 4 even though classes and iterators are.
+Sometimes a particular feature is *mostly* implemented in Node.js. In that case transforms are not applied.
 
 Not all proposals can be supported via Babel transforms, see below for details. Babel may require "syntax" plugins in order to parse certain files. These plugins should be applied explicitly since this preset may not include them.
 

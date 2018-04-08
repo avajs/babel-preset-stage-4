@@ -22,12 +22,8 @@ function getClosestVersion() {
 		return `v8-6.0`;
 	}
 
-	if (version >= 6) {
-		return '6';
-	}
-
-	// Node.js 4 is the minimal supported version.
-	return '4';
+	// Node.js 6 is the minimal supported version.
+	return '6';
 }
 
 module.exports = require(`./${getClosestVersion()}.json`);
