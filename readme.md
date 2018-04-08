@@ -54,7 +54,7 @@ By default this preset transform ES2015 modules to CommonJS. Set to `false` to d
 | [`Promise.prototype.finally`][finally]                                   | No
 | [Asynchronous Iteration][async-iteration]                                | Partially<sup>†</sup>
 
-† [`@babel/plugin-proposal-async-generator-functions`](https://www.npmjs.com/package/@babel/plugin-proposal-async-generator-functions) relies on `Symbol.asyncIterator`, which AVA does not polyfill for you. As of `v7.0.0-beta.39` this plugin *does not* transform the `for-await-of` syntax. See [this Babel issue](https://github.com/babel/babel/issues/4969) for updates. You need to use the [`@babel/plugin-transform-async-to-generator`](https://www.npmjs.com/package/@babel/plugin-transform-async-to-generator) plugin, in addition to this preset.
+† [`@babel/plugin-proposal-async-generator-functions`](https://www.npmjs.com/package/@babel/plugin-proposal-async-generator-functions) relies on `Symbol.asyncIterator`, which AVA does not polyfill for you.
 
 
 [AVA]: https://ava.li
