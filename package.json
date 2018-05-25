@@ -6,7 +6,7 @@
   "repository": "avajs/babel-preset-stage-4",
   "author": "Mark Wubben (https://novemberborn.net)",
   "engines": {
-    "node": ">=6.12.3 <7 || >=8.9.4"
+    "node": ">=6.12.3 <7 || >=8.9.4 <9 || >=9.11.1 <10 || >=10.0.0"
   },
   "scripts": {
     "test": "xo && nyc ava"
