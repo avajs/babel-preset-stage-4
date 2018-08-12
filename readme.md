@@ -4,7 +4,7 @@
 
 Aspires to bring [finished ECMAScript proposals](https://github.com/tc39/proposals/blob/master/finished-proposals.md) to AVA's test and helper files.
 
-Efficiently applies the minimum of transforms to run the latest JavaScript syntax on Node.js 6 and 8.
+Efficiently applies the minimum of transforms to run the latest JavaScript syntax on Node.js 6, 8 and 10.
 
 Built-ins are not added or extended, so features like Proxies, `Array.prototype.includes` or `String.prototype.padStart` will only be available if the Node.js version running the tests supports it. Consult [node.green] for details.
 
