@@ -6,7 +6,7 @@
   "repository": "avajs/babel-preset-stage-4",
   "author": "Mark Wubben (https://novemberborn.net)",
   "engines": {
-    "node": ">=6.12.3 <7 || >=8.9.4 <9 || >=10.0.0"
+    "node": ">=8.9.4 <9 || >=10.0.0"
   },
   "scripts": {
     "test": "xo && nyc ava"
@@ -20,21 +20,18 @@
     "babel-preset"
   ],
   "dependencies": {
-    "@babel/plugin-proposal-async-generator-functions": "^7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-proposal-optional-catch-binding": "^7.0.0",
-    "@babel/plugin-transform-async-to-generator": "^7.0.0",
-    "@babel/plugin-transform-dotall-regex": "^7.0.0",
-    "@babel/plugin-transform-exponentiation-operator": "^7.0.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.0.0"
+    "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
+    "@babel/plugin-proposal-optional-catch-binding": "^7.2.0",
+    "@babel/plugin-transform-dotall-regex": "^7.4.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "ava": "^0.25.0",
-    "codecov": "^3.0.4",
-    "nyc": "^12.0.2",
-    "proxyquire": "^2.0.1",
-    "xo": "^0.22.0"
+    "@babel/core": "^7.4.3",
+    "ava": "^1.4.1",
+    "codecov": "^3.3.0",
+    "nyc": "^14.0.0",
+    "proxyquire": "^2.1.0",
+    "xo": "^0.24.0"
   },
   "nyc": {
     "reporter": [

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-dynamic-require */
 import fs from 'fs';
 import test from 'ava';
 import proxyquire from 'proxyquire';
@@ -30,16 +29,14 @@ function buildsCorrectPreset(t, node, v8, mapping) {
 		t.is(require(module).default, plugins[index], `${module} at index ${index}`);
 	});
 }
+
 buildsCorrectPreset.title = (_, node) => `builds correct preset for Node.js ${node}`;
 
 for (const [node, v8, mapping] of [
-	['6.9.4', null, './plugins/6.json'],
-	['7.4.0', null, './plugins/6.json'],
-	['8.3.0', null, './plugins/v8-6.0.json'],
-	['8.9.4', '6.1.534.50', './plugins/v8-6.0.json'],
-	['9.0.0', '6.2.414.32-node.8', './plugins/v8-6.2.json'],
-	// TODO: Set actual version once 6.3 ships in Node.js
-	['10.0.0', '6.3.something', './plugins/v8-6.3.json']
+	['not-v8-at-all', null, './plugins/v8-6.1.json'],
+	['8.9.4', '6.1.534.50', './plugins/v8-6.1.json'],
+	['8.16.0', '6.2.414.77', './plugins/v8-6.2.json'],
+	['10.0.0', '6.6.346.24-node.5', './plugins/v8-6.6.json']
 ]) {
 	test(buildsCorrectPreset, node, v8, mapping);
 }

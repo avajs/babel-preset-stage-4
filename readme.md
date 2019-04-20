@@ -4,7 +4,7 @@
 
 Aspires to bring [finished ECMAScript proposals](https://github.com/tc39/proposals/blob/master/finished-proposals.md) to AVA's test and helper files.
 
-Efficiently applies the minimum of transforms to run the latest JavaScript syntax on Node.js 6, 8 and 10.
+Efficiently applies the minimum of transforms to run the latest JavaScript syntax on Node.js 8 and 10.
 
 Built-ins are not added or extended, so features like Proxies, `Array.prototype.includes` or `String.prototype.padStart` will only be available if the Node.js version running the tests supports it. Consult [node.green] for details.
 
@@ -38,17 +38,14 @@ By default this preset transform ES2015 modules to CommonJS. Set to `false` to d
 | Proposal                                                                 | Supported
 | ------------------------------------------------------------------------ | ---------
 | [`Array.prototype.includes`][array-includes]                             | No
-| [Exponentiation operator][exponentiation]                                | Yes
 | [`Object.values`/`Object.entries`][object-values-entries]                | No
 | [String padding][string-padding]                                         | No
 | [`Object.getOwnPropertyDescriptors`][object-gopds]                       | No
 | [Trailing commas in function parameter lists and calls][function-commas] | Yes
-| [Async functions][async-await]                                           | Yes
 | [Shared memory and atomics][atomics]                                     | No
 | [Lifting template literal restriction][template-literal-lift]            | No
 | [`s` (`dotAll`) flag for regular expressions][dot-all]                   | Yes
 | [RegExp named capture groups][named-groups]                              | No
-| [Rest/Spread Properties][object-rest-spread]                             | Yes
 | [RegExp Lookbehind Assertions][lookbehind]                               | No
 | [RegExp Unicode Property Escapes][unicode-escapes]                       | No
 | [`Promise.prototype.finally`][finally]                                   | No
@@ -64,18 +61,14 @@ By default this preset transform ES2015 modules to CommonJS. Set to `false` to d
 [preset options]: http://babeljs.io/docs/plugins/#pluginpreset-options
 
 [array-includes]: https://github.com/tc39/Array.prototype.includes
-[exponentiation]: https://github.com/rwaldron/exponentiation-operator
-[exponentiation-notes]: https://github.com/rwaldron/tc39-notes/blob/master/es7/2016-01/2016-01-28.md#5xviii-exponentiation-operator-rw
 [object-values-entries]: https://github.com/tc39/proposal-object-values-entries
 [string-padding]: https://github.com/tc39/proposal-string-pad-start-end
 [object-gopds]: https://github.com/ljharb/proposal-object-getownpropertydescriptors
 [function-commas]: https://github.com/tc39/proposal-trailing-function-commas
-[async-await]: https://github.com/tc39/ecmascript-asyncawait
 [atomics]: https://github.com/tc39/ecmascript_sharedmem
 [template-literal-lift]: https://github.com/tc39/proposal-template-literal-revision
 [dot-all]: https://github.com/tc39/proposal-regexp-dotall-flag
 [named-groups]: https://github.com/tc39/proposal-regexp-named-groups
-[object-rest-spread]: https://github.com/tc39/proposal-object-rest-spread
 [lookbehind]: https://github.com/tc39/proposal-regexp-lookbehind
 [unicode-escapes]: https://github.com/tc39/proposal-regexp-unicode-property-escapes
 [finally]: https://github.com/tc39/proposal-promise-finally
