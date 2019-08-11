@@ -6,7 +6,7 @@
   "repository": "avajs/babel-preset-stage-4",
   "author": "Mark Wubben (https://novemberborn.net)",
   "engines": {
-    "node": ">=8.9.4 <9 || >=10.0.0"
+    "node": ">=8.9.4 <9 || >=10.0.0 <11 || >=12.0.0"
   },
   "scripts": {
     "test": "xo && nyc ava"
@@ -22,15 +22,15 @@
   "dependencies": {
     "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
     "@babel/plugin-proposal-optional-catch-binding": "^7.2.0",
-    "@babel/plugin-transform-dotall-regex": "^7.4.3",
-    "@babel/plugin-transform-modules-commonjs": "^7.4.3"
+    "@babel/plugin-transform-dotall-regex": "^7.4.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "ava": "^1.4.1",
-    "codecov": "^3.3.0",
-    "nyc": "^14.0.0",
-    "proxyquire": "^2.1.0",
+    "@babel/core": "^7.5.5",
+    "ava": "^2.2.0",
+    "codecov": "^3.5.0",
+    "nyc": "^14.1.1",
+    "proxyquire": "^2.1.2",
     "xo": "^0.24.0"
   },
   "nyc": {
