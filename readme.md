@@ -51,7 +51,16 @@ By default this preset transform ES2015 modules to CommonJS. Set to `false` to d
 | [`Promise.prototype.finally`][finally]                                   | No
 | [Asynchronous Iteration][async-iteration]                                | Partially<sup>†</sup>
 | [Optional `catch` binding][optional-catch]                               | Yes
+| [JSON superset][json-superset]                                           | No
+| [`Symbol.prototype.description`][symbol-description]                     | No
+| [`Function.prototype.toString` revision][function-tostring-revision]     | No
+| [`Object.fromEntries`][object-fromentries]                               | No
+| [Well-formed `JSON.stringify`][well-formed-stringify]                    | No
+| [`String.prototype.{trimStart,trimEnd}`][string-left-right-trim]         | No
+| [`Array.prototype.{flat,flatMap}`][flatmap]                              | No
+| [`String.prototype.matchAll`][string-matchall]                           | No
 | [`import()`][dynamic-import]                                             | Yes
+| [`Promise.allSettled`][promise-allsettled]                               | No
 
 † [`@babel/plugin-proposal-async-generator-functions`](https://www.npmjs.com/package/@babel/plugin-proposal-async-generator-functions) relies on `Symbol.asyncIterator`, which AVA does not polyfill for you.
 
@@ -75,4 +84,13 @@ By default this preset transform ES2015 modules to CommonJS. Set to `false` to d
 [finally]: https://github.com/tc39/proposal-promise-finally
 [async-iteration]: https://github.com/tc39/proposal-async-iteration
 [optional-catch]: https://github.com/tc39/proposal-optional-catch-binding
+[json-superset]: https://github.com/tc39/proposal-json-superset
+[symbol-description]: https://github.com/tc39/proposal-Symbol-description
+[function-tostring-revision]: https://github.com/tc39/Function-prototype-toString-revision
+[object-fromentries]: https://github.com/tc39/proposal-object-from-entries
+[well-formed-stringify]: https://github.com/tc39/proposal-well-formed-stringify
+[string-left-right-trim]: https://github.com/tc39/proposal-string-left-right-trim
+[flatmap]: https://github.com/tc39/proposal-flatMap
+[string-matchall]: https://github.com/tc39/String.prototype.matchAll
 [dynamic-import]: https://github.com/tc39/proposal-dynamic-import
+[promise-allsettled]: https://github.com/tc39/proposal-promise-allSettled
