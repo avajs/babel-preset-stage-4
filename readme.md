@@ -51,6 +51,7 @@ By default this preset transform ES2015 modules to CommonJS. Set to `false` to d
 | [`Promise.prototype.finally`][finally]                                   | No
 | [Asynchronous Iteration][async-iteration]                                | Partially<sup>†</sup>
 | [Optional `catch` binding][optional-catch]                               | Yes
+| [`import()`][dynamic-import]                                             | Yes
 
 † [`@babel/plugin-proposal-async-generator-functions`](https://www.npmjs.com/package/@babel/plugin-proposal-async-generator-functions) relies on `Symbol.asyncIterator`, which AVA does not polyfill for you.
 
@@ -74,3 +75,4 @@ By default this preset transform ES2015 modules to CommonJS. Set to `false` to d
 [finally]: https://github.com/tc39/proposal-promise-finally
 [async-iteration]: https://github.com/tc39/proposal-async-iteration
 [optional-catch]: https://github.com/tc39/proposal-optional-catch-binding
+[dynamic-import]: https://github.com/tc39/proposal-dynamic-import

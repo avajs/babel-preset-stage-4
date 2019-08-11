@@ -45,3 +45,8 @@ test('@babel/plugin-transform-modules-commonjs can be disabled', t => {
 	const {plugins} = buildPreset('8.9.4', '6.1.534.50', {modules: false});
 	t.false(new Set(plugins).has(require('@babel/plugin-transform-modules-commonjs').default));
 });
+
+test('@babel/plugin-proposal-dynamic-import can be disabled', t => {
+	const {plugins} = buildPreset('8.9.4', '6.1.534.50', {modules: false});
+	t.false(new Set(plugins).has(require('@babel/plugin-proposal-dynamic-import').default));
+});
